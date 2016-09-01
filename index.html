@@ -10,6 +10,44 @@
   <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Simonetta:400,900|Balthazar">
   <link rel="stylesheet" type="text/css" href="css/styles.css">
   <link rel="stylesheet" type="text/css" href="css/responsive.css">
+  <script type="text/javascript">
+    function addCellHeader(table) {
+      if (!table) {
+        return false;
+      }
+
+      var trs = table.getElementsByTagName('tr');
+      var trsChild;
+      var grid = {};
+      var cells;
+      for (var i = 0, cntI = trs.length; i < cntI; i++) {
+        if (!grid[i]) {
+          grid[i] = {};
+        }
+        trsChild = trs.item(i).childNodes;
+        cells = 0;
+        for (var j = 0, cntJ = trsChild.length; j < cntJ; j++) {
+          if (trsChild[j].nodeType == 1) {
+            grid[i][cells++] = trsChild[j];
+          }
+        }
+      }
+      var cellHeader = '';
+      for (row in grid) {
+        if (row == 0) {
+          continue;
+        }
+        for (cell in grid[row]) {
+          cellHeader =  grid[0][cell].innerHTML;
+          grid[row][cell].setAttribute('data-cell-header', cellHeader);
+        }
+      }
+    }
+
+    window.onload = function()  {
+			addCellHeader(document.querySelector(".afternoon-session"));
+    }
+  </script>
   <!--[if lt IE 9]>
     <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
     <script src="http://css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js"></script>
@@ -21,7 +59,7 @@
 		<header class="clearfix">
 			<div id="info">
 				<h1><span itemprop="name">박종하</span></h1>
-        <h3><span itemprop="jobTitle">Web Developer & Full Stack Developer</span></h3>
+        <h3><span itemprop="jobTitle">Web Developer &amp; Full Stack Developer</span></h3>
 				<h3><span itemprop="telephone">010-6327-9070</span></h3>
 				<small itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">
 				  <span itemprop="addressRegion">부산시 사상구 백양대로 539, 103동 204호</span>
@@ -85,38 +123,37 @@
 
 		<section id="experience">
 			<h2>경력사항</h2>
-      <table border="0">
-        <colgroup>
-          <col width="30%">
-          <col width="20%">
-          <col width="50%">
-        </colgroup>
+      <table class="afternoon-session" cellspacing="1">
+        <thead>
         <tr>
-          <th>기간</th>
-          <th>회사명</th>
-          <th>업무<th>
+          <th scope="row" width="30%">기간</th>
+          <th scope="row" width="20%">회사명</th>
+          <th scope="row" width="50%">업무</th>
         </tr>
+      </thead>
+      <tbody>
         <tr>
           <td>2015년 06월 ~ 재직 중</td>
           <td>금양</td>
-          <td>- ERP 개발 및 운영</td>
+          <td>ERP 개발 및 운영</td>
         </tr>
         <tr>
           <td>2011년 03월 ~ 2015년 04월</td>
           <td>케이엘넷</td>
-          <td>- 국내 세관 신고 전송 및 응답 처리 웹 프로그램 개발<br/>
-- 국내 항만청 신고 전송 및 응답 처리 웹 프로그램 개발<br/>
-- 터미널 전송 및 연계 웹 프로그램 개발<br/>
-- 일본 세관 사전신고제도(AFR) 전송 및 응답 처리 웹 프로그램 개발<br/>
-- ARRIVAL NOTICE 개발<br/>
-- 화주 INVOICE 개발<br/>
-- DO발급확인요청 개발</td>
+          <td>국내 세관 신고 전송 및 응답 처리 웹 프로그램 개발<br/>
+국내 항만청 신고 전송 및 응답 처리 웹 프로그램 개발<br/>
+터미널 전송 및 연계 웹 프로그램 개발<br/>
+일본 세관 사전신고제도(AFR) 전송 및 응답 처리 웹 프로그램 개발<br/>
+ARRIVAL NOTICE 개발<br/>
+화주 INVOICE 개발<br/>
+DO발급확인요청 개발</td>
         </tr>
         <tr>
           <td>2009년 10월 ~ 2011년 06월</td>
           <td>아바드</td>
-          <td>- 피처폰 개발<br/>- 안드로이드폰 개발<br/>- 휘트니스 관련 안드로이드 앱 개발</td>
+          <td>피처폰 개발<br/>안드로이드폰 개발<br/>휘트니스 관련 안드로이드 앱 개발</td>
         </tr>
+      </tbody>
       </table>
 		</section>
 

@@ -37,3 +37,32 @@
 @media screen and (max-device-width: 480px) {
 	ul li { width: 150px; }
 }
+
+@media screen and (max-width: 650px) {
+	table.afternoon-session {
+		width: 100%;
+	}
+	table.afternoon-session [data-cell-header]:before {
+		content: attr(data-cell-header);
+		display: block;
+		position:absolute;
+		/*top:0;*/
+		left:0;
+    width:25%;
+		text-align: left;
+		padding: 0.3em 0.6em;
+    font-weight:bold;
+	}
+	table.afternoon-session thead {
+		display: none;
+	}
+	table.afternoon-session td {
+		position:relative;
+		display: block;
+		padding:0.3em 0 0.3em 30%;
+		margin-bottom:1px;
+	}
+	table.afternoon-session td:first-of-type {
+		margin-top:10px;
+	}
+}
