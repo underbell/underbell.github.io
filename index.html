@@ -1,269 +1,506 @@
-<!doctype html>
-<html lang="ko">
-<head>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <title>Kevin's Resume</title>
-    <meta name="author" content="Kevin Park">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <meta name="HandheldFriendly" content="true">
-    <meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
-    <link rel="apple-touch-icon" sizes="57x57" href="/apple-icon-57x57.png">
-    <link rel="apple-touch-icon" sizes="60x60" href="/apple-icon-60x60.png">
-    <link rel="apple-touch-icon" sizes="72x72" href="/apple-icon-72x72.png">
-    <link rel="apple-touch-icon" sizes="76x76" href="/apple-icon-76x76.png">
-    <link rel="apple-touch-icon" sizes="114x114" href="/apple-icon-114x114.png">
-    <link rel="apple-touch-icon" sizes="120x120" href="/apple-icon-120x120.png">
-    <link rel="apple-touch-icon" sizes="144x144" href="/apple-icon-144x144.png">
-    <link rel="apple-touch-icon" sizes="152x152" href="/apple-icon-152x152.png">
-    <link rel="apple-touch-icon" sizes="180x180" href="/apple-icon-180x180.png">
-    <link rel="icon" type="image/png" sizes="192x192"  href="/android-icon-192x192.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-    <link rel="manifest" href="/manifest.json">
-    <meta name="msapplication-TileColor" content="#ffffff">
-    <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
-    <meta name="theme-color" content="#ffffff">
-    <meta property="og:url" content="https://underbell.github.io/" />
-    <meta property="og:type" content="website" />
-    <meta property="og:title" content="Kevin's Resume" />
-    <meta property="og:description" content="Kevin's Resume" />
-    <meta property="og:image" content="https://avatars1.githubusercontent.com/u/8198782?s=460&v=4" />
-    <link rel="stylesheet" type="text/css" href="css/styles.css">
-    <link rel="stylesheet" type="text/css" href="css/responsive.css">
-    <script type="text/javascript" src="https://platform.linkedin.com/badges/js/profile.js" async defer></script>
-    <script type="text/javascript">
-        function addCellHeader(table) {
-        if (!table) {
-            return false;
-        }
+<!DOCTYPE html>
+<html lang="en-us">
+    <head>
+        <meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Lead Software engineer at Hanjudo">
+<meta name="author" content="Kevin Park">
+<meta name="generator" content="Hugo 0.56.3" />
+<title>My Profile Site</title>
+<!-- Bootstrap Core CSS - Uses Bootswatch Flatly Theme: http://bootswatch.com/flatly/ -->
+<link href="https://underbell.github.io/css/bootstrap.min.css" rel="stylesheet">
+<!-- Custom CSS -->
+<link href="css/freelancer.css" rel="stylesheet">
 
-        var trs = table.getElementsByTagName('tr');
-        var trsChild;
-        var grid = {};
-        var cells;
-        for (var i = 0, cntI = trs.length; i < cntI; i++) {
-            if (!grid[i]) {
-            grid[i] = {};
-            }
-            trsChild = trs.item(i).childNodes;
-            cells = 0;
-            for (var j = 0, cntJ = trsChild.length; j < cntJ; j++) {
-            if (trsChild[j].nodeType == 1) {
-                grid[i][cells++] = trsChild[j];
-            }
-            }
-        }
-        var cellHeader = '';
-        for (row in grid) {
-            if (row == 0) {
-            continue;
-            }
-            for (cell in grid[row]) {
-            cellHeader =  grid[0][cell].innerHTML;
-            grid[row][cell].setAttribute('data-cell-header', cellHeader);
-            }
-        }
-        }
+<!-- Custom Fonts -->
+<link href="https://underbell.github.io/css/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+<link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+<link href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css">
+<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+<!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+<![endif]-->
 
-        window.onload = function()  {
-                addCellHeader(document.querySelector(".afternoon-session"));
-        }
-    </script>
-    <!--[if lt IE 9]>
-        <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
-        <script src="http://css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js"></script>
-    <![endif]-->
     </head>
+    <body id="page-top" class="index">
 
-    <body>
-        <div id="w" itemscope itemtype="http://schema.org/Person">
-            <header class="clearfix">
-                <div id="info">
-                    <!--
-            <h1><span itemprop="name">박종하</span></h1>
-            <h3><span itemprop="jobTitle">Web Developer &amp; Full Stack Developer </span></h3>
-                    <small><span itemprop="email">underbell.park@gmail.com</span></small>
-                    <small><a href="https://www.facebook.com/underbell.park" itemprop="url">facebook</a></small>
-            <small><a href="https://github.com/underbell" itemprop="github">github</a></small>
-            <a id="print" href="javascript:window.print();" title="Print"><img src="images/icn-print.jpg" alt="" /></a>
-            -->
-            <div class="LI-profile-badge"  data-version="v1" data-size="large" data-locale="ko_KR" data-type="horizontal" data-theme="dark" data-vanity="park-kevin"><a class="LI-simple-link" href='https://kr.linkedin.com/in/park-kevin?trk=profile-badge'>Kevin Park</a></div>
-                </div>
-                <!--<div id="photo">
-                    <img src="https://avatars1.githubusercontent.com/u/8198782?s=460&v=4" alt="" itemprop="image" />
-                </div>-->
-            </header>
-
-            <section id="profile">
-                <h2>자기소개</h2>
-                <p itemprop="description">재미있는 개발자가 되고 싶은 저를 소개합니다.</p>
-                <p>안녕하세요. 소프트웨어 엔지니어 박종하 입니다.
-
-지금까지 다양한 경험을 토대로 새롭게 발전해 나아가기 위해 노력 중입니다. DevOps 지향하며 Terraform 과 Ansible 을 이용하여 Infrastructure as Code를 실천하고 있습니다. 클라우드 서비스는 주로 AWS를 사용하고 있습니다.
-최근에는 DevOps와 OAuth2 에 관심을 갖고 OAuth2 기반의 서비스를 개발하고 있습니다
-
-블록체인은 Ethereum ERC20 토큰 및 클라우드세일 컨트렉트 개발을 시작으로 하여 Hyperledger Framework와 Tools을 주로 다루며 관심있게 보고 있습니다. Ethereum기반의 ICO를 성공적으로 수행하였으며 Hyperledger fabric 기반의 private 블록체인을 개발하고 있습니다. Hyperledger Framework로 fabric 외에 Hyperledger sawtooth 또한 관심있게 보고 있습니다. Hyperledger Tools는 Caliper, Explorer, Cello를 활용해 보았으며 Hyperledger 전반적인 부분에 관심이 많습니다. Hyperledger fabric을 개발하며 블록체인 지식과 함께 Docker와 Kubernetes 에 대한 경험도 쌓았습니다.
-
-IBM Developer Day 2018에서 하이퍼레저 패브릭 기반의 서비스형 블록체인 플랫폼에 대해 발표를 했으며 이어 Hyperledger Korea User Group 밋업에서도 발표를 하며 커뮤니티 활동에도 적극 참여하고 있습니다.</p>
-            </section>
-
-            <section id="skills" class="clearfix" itemscope itemtype="http://schema.org/ItemList">
-                <h2 itemprop="name">보유기술</h2>
-                <section id="skills-left">
-                    <ul>
-            <li itemprop="itemListElement">DevOps</li>
-            <li itemprop="itemListElement">Terraform</li>
-            <li itemprop="itemListElement">Ansible</li>
-            <li itemprop="itemListElement">Kubernetes</li>
-            <li itemprop="itemListElement">Docker</li>
-            <li itemprop="itemListElement">OAuth2.0</li>
-            <li itemprop="itemListElement">AWS</li>
-            <li itemprop="itemListElement">Spring / Spring Cloud</li>
-            <li itemprop="itemListElement">JPA</li>
-            <li itemprop="itemListElement">Scouter APM</li>
-                    </ul>
-                </section>
-
-                <section id="skills-right">
-                    <h4 itemprop="about"></h4>
-                    <ul>
-            <li itemprop="itemListElement">Blockchain</li>
-            <li itemprop="itemListElement">Hyperledger Fabric</li>
-            <li itemprop="itemListElement">Hyperledger Composer</li>
-            <li itemprop="itemListElement">Hyperledger Sawtooth</li>
-            <li itemprop="itemListElement">Hyperledger Caliper</li>
-            <li itemprop="itemListElement">Hyperledger Cello</li>
-            <li itemprop="itemListElement">Ethereum</li>
-            <li itemprop="itemListElement">Solidity</li>
-            <li itemprop="itemListElement">ERC20 ICO</li>
-            <li itemprop="itemListElement">Apache Brooklyn</li>
-                    </ul>
-                </section>
-            </section>
-
-            <section id="experience">
-                <h2>경력사항</h2>
-        <table class="afternoon-session" cellspacing="1">
-            <thead>
-            <tr>
-            <th scope="row" width="30%">기간</th>
-            <th scope="row" width="20%">회사명</th>
-            <th scope="row" width="50%">업무</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-            <td>2017년 11월 ~ </td>
-            <td>Jehmi</td>
-            <td><pre>
-    Hyperledger
-    - Sawtooth
-    - Fabric
-    - Composer
-    - Cello
-    - Caliper
-    Ethereum
-    - Solidity
-    - Smart Contracts
-    - ECR20 ICO
-    DevOps
-    -  AWS
-    </pre></td>
-            </tr>
-        <tr>
-            <td>2017년 03월 ~ 2017년 10월</td>
-            <td>BNK시스템</td>
-            <td><pre>
-    부산은행 푸시서비스 추가도입 사업 PM 수행
-    부산은행 썸라이프 사업 개발 PL 수행
-    </pre></td>
-            </tr>
-            <tr>
-            <td>2015년 06월 ~ 2017 03월</td>
-            <td>금양</td>
-            <td><pre>
-    시스템 아키텍처 설계
-    ERP 개발 및 유지보수
-    - 스프링 프레임워크 커스트마이징
-    - 스프링 시큐리티 커스트마이징
-    - 각 업무모듈 개발 지원
-    DevOps
-    - 웹서버 Nginx 설정, load balancing 설정 및 운영
-    - 웹어플리케이션서버 Tomcat 8.5 설정 ,Session clustering 설정 및 운영
-    - Jenkins, Redmine, Subversion, Sonarqube, APM, Report Server, ELK 설정 및 운영
-        </pre></td>
-            </tr>
-            <tr>
-            <td>2011년 7월 ~ 2015년 04월</td>
-            <td>케이엘넷</td>
-            <td><pre>
-    전자정부프레임워크 1.x 에서 2.x 으로 마이그레이션
-    전자정부프레임워크 2.x 에서 3.5 으로 마이그레이션
-    국내 세관 신고 전송 및 응답 처리 웹 프로그램 개발 및 유지보수
-    - 수출입적하목록
-    - 수출입적하목록 정정
-    - 하선신고서
-    - 하선신고서 정정
-    - 하선신고서 반입연장신청
-    국내 항만청 신고 전송 및 응답 처리 웹 프로그램 개발 및 유지보수
-    - 외항화물반출입
-    - 위험물반입신청
-    - 위험물적하일람표
-    - 항만시설사용신고서
-    - 집계표
-    터미널 전송 및 연계 웹 프로그램 개발 및 유지보수
-    - 컨테이너 선적목록
-    일본 세관 사전신고제도(AFR) 전송 및 응답 처리 웹 프로그램 개발 및 유지보수
-    - AMR
-    - CMR
-    - AHR
-    - CHR
-    - ATD
-    - IML
-    ARRIVAL NOTICE 웹 프로그램 개발 및 유지보수
-    화주 INVOICE 웹 프로그램 개발 및 유지보수
-    DO발급확인요청 웹 프로그램 개발 및 유지보수
-    관할해역 연구사업 지원
-    - 전자정부프레임워크 커스트마이징
-    - ArcGIS Sample page 개발
-    각 문서별 parser, mapper 개발 및 유지보수
-            </pre></td>
-            </tr>
-            <tr>
-            <td>2009년 10월 ~ 2011년 06월</td>
-            <td>아바드</td>
-            <td><pre>
-    피쳐폰 개발
-    - 음성 및 영상통화 관련 개발
-    - 해외 로밍 관련 개발
-    - USIM 프로토콜 관련 개발
-    안드로이드폰 개발
-    - 음성 및 영상통화 관련 개발
-    - 해외 로밍 관련 개발
-    - USIM 프로토콜 관련 개발
-    휘트니스 관련 안드로이드 앱 개발
-    - GPS를 이용한 운동 경로 및 거리 측정
-    - 칼로리 소모량 측정
-            </pre></td>
-            </tr>
-        </tbody>
-        </table>
-            </section>
-
-        <section id="education">
-            <h2>학력</h2>
-            <p><span itemprop="alumniOf">성광고등학교</span> 2000년 2월 졸업</p>
-                <p><span itemprop="alumniOf">한국해양대학교</span> 2008년 2월 졸업</p>
-        </section>
-
-        <section id="certificate">
-                <h2>자격증</h2>
-        <ul>
-            <li>정보처리기사</li>
-            <li>IOT지식능력검정</li>
-        </ul>
-            </section>
+        <!-- Navigation -->
+<nav class="navbar navbar-default navbar-fixed-top">
+    <div class="container">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header page-scroll">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#page-top">Kevin&#39;s Portfolio</a>
         </div>
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-right">
+                <li class="hidden">
+                    <a href="#page-top"></a>
+                </li>
+                <li class="page-scroll">
+                    <a href="#portfolio">Portfolio</a>
+                </li>
+                <li class="page-scroll">
+                    <a href="#about"></a>
+                </li>
+                <li class="page-scroll">
+                    <a href="#contact"></a>
+                </li>
+            </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container-fluid -->
+</nav>
+
+
+        <!-- Header -->
+<header>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <img class="img-responsive" src="img/profile.png" alt="">
+                <div class="intro-text">
+                    <span class="name">Kevin</span>
+                    <hr class="star-light">
+                    <span class="skills">DevOps - Spring - Blockchain</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+        <!-- Portfolio Grid Section -->
+<section id="portfolio">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12 text-center">
+                <h2>Portfolio</h2>
+                <hr class="star-primary">
+            </div>
+        </div>
+        <div class="row">
+            
+            <div class="col-sm-4 portfolio-item">
+                <a href="#portfolioModal1" class="portfolio-link" data-toggle="modal">
+                    <div class="caption">
+                        <div class="caption-content">
+                            <i class="fa fa-search-plus fa-3x"></i>
+                        </div>
+                    </div>
+                    <img src="img/portfolio/hanjudo.png" class="img-responsive">
+                </a>
+            </div>
+            
+            <div class="col-sm-4 portfolio-item">
+                <a href="#portfolioModal2" class="portfolio-link" data-toggle="modal">
+                    <div class="caption">
+                        <div class="caption-content">
+                            <i class="fa fa-search-plus fa-3x"></i>
+                        </div>
+                    </div>
+                    <img src="img/portfolio/jehmi.png" class="img-responsive">
+                </a>
+            </div>
+            
+            <div class="col-sm-4 portfolio-item">
+                <a href="#portfolioModal3" class="portfolio-link" data-toggle="modal">
+                    <div class="caption">
+                        <div class="caption-content">
+                            <i class="fa fa-search-plus fa-3x"></i>
+                        </div>
+                    </div>
+                    <img src="img/portfolio/bezant.png" class="img-responsive">
+                </a>
+            </div>
+            
+            <div class="col-sm-4 portfolio-item">
+                <a href="#portfolioModal2" class="portfolio-link" data-toggle="modal">
+                    <div class="caption">
+                        <div class="caption-content">
+                            <i class="fa fa-search-plus fa-3x"></i>
+                        </div>
+                    </div>
+                    <img src="img/portfolio/bnk.jpg" class="img-responsive">
+                </a>
+            </div>
+            
+            <div class="col-sm-4 portfolio-item">
+                <a href="#portfolioModal5" class="portfolio-link" data-toggle="modal">
+                    <div class="caption">
+                        <div class="caption-content">
+                            <i class="fa fa-search-plus fa-3x"></i>
+                        </div>
+                    </div>
+                    <img src="img/portfolio/kyc.jpg" class="img-responsive">
+                </a>
+            </div>
+            
+            <div class="col-sm-4 portfolio-item">
+                <a href="#portfolioModal6" class="portfolio-link" data-toggle="modal">
+                    <div class="caption">
+                        <div class="caption-content">
+                            <i class="fa fa-search-plus fa-3x"></i>
+                        </div>
+                    </div>
+                    <img src="img/portfolio/klnet.png" class="img-responsive">
+                </a>
+            </div>
+            
+            <div class="col-sm-4 portfolio-item">
+                <a href="#portfolioModal7" class="portfolio-link" data-toggle="modal">
+                    <div class="caption">
+                        <div class="caption-content">
+                            <i class="fa fa-search-plus fa-3x"></i>
+                        </div>
+                    </div>
+                    <img src="img/portfolio/avad.png" class="img-responsive">
+                </a>
+            </div>
+            
+        </div>
+    </div>
+</section>
+
+    
+
+        <!-- Footer -->
+<footer class="text-center">
+    <div class="footer-above">
+        <div class="container">
+            <div class="row">
+                <div class="footer-col col-md-6">
+                    <h3>Location</h3>
+
+                    
+                        <p>
+                            
+                                
+                                Yongin-si, Gyeonggi-do
+                            
+                                <br>
+                                Republic of Korea
+                            
+                        </p>
+                    
+                </div>
+                <div class="footer-col col-md-6">
+                    <h3>Around the web</h3>
+                    <ul class="list-inline">
+                        
+                            <li>
+                                <a href="//github.com/underbell" class="btn-social btn-outline"><i class="fa fa-fw fa-github"></i></a>
+                            </li>
+                        
+                            <li>
+                                <a href="//www.facebook.com/underbell.park" class="btn-social btn-outline"><i class="fa fa-fw fa-facebook"></i></a>
+                            </li>
+                        
+                    </ul>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+    <div class="footer-below">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    Published under the Apache License 2.0. Powered by <a href="//gohugo.io">Hugo</a>.
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<!-- Scroll to Top Button (Only visible on small and extra-small screen sizes) -->
+<div class="scroll-top page-scroll visible-xs visible-sm">
+    <a class="btn btn-primary" href="#page-top">
+        <i class="fa fa-chevron-up"></i>
+    </a>
+</div>
+
+        <!-- Portfolio Modals -->
+
+<div class="portfolio-modal modal fade" id="portfolioModal1" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-content">
+        <div class="close-modal" data-dismiss="modal">
+            <div class="lr">
+                <div class="rl">
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2">
+                    <div class="modal-body">
+                        <h2>한주도(주))</h2>
+                        <hr class="star-primary">
+                        <img src="img/portfolio/hanjudo.png" class="img-responsive img-centered" alt="">
+                        <p><pre><code>- AWS Could Architect
+- DevOps Terraform, Ansible
+- Spring, Spring Cloud
+- OAuth2.0
+</code></pre></p>
+                        <ul class="list-inline item-details">
+                            
+                            <li>Date:
+                                <strong>2019-07 ~</strong>
+                            </li>
+                            <li>Category:
+                                <strong>Lead Developer</strong>
+                            </li>
+                        </ul>
+                        <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i> Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="portfolio-modal modal fade" id="portfolioModal2" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-content">
+        <div class="close-modal" data-dismiss="modal">
+            <div class="lr">
+                <div class="rl">
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2">
+                    <div class="modal-body">
+                        <h2>재미코리아</h2>
+                        <hr class="star-primary">
+                        <img src="img/portfolio/jehmi.png" class="img-responsive img-centered" alt="">
+                        <p><pre><code>- AWS Could Architect
+- DevOps Terraform, Ansible
+- Spring, Spring Cloud
+- OAuth2.0
+</code></pre></p>
+                        <ul class="list-inline item-details">
+                            
+                            <li>Date:
+                                <strong>2017-11 ~ 2019-07</strong>
+                            </li>
+                            <li>Category:
+                                <strong>Lead Developer</strong>
+                            </li>
+                        </ul>
+                        <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i> Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="portfolio-modal modal fade" id="portfolioModal3" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-content">
+        <div class="close-modal" data-dismiss="modal">
+            <div class="lr">
+                <div class="rl">
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2">
+                    <div class="modal-body">
+                        <h2>Beznat</h2>
+                        <hr class="star-primary">
+                        <img src="img/portfolio/bezant.png" class="img-responsive img-centered" alt="">
+                        <p><pre><code>- Blockchain
+- Hyperledger Sawtooth
+- Hyperledger Fabric
+- Hyperledger Cello, Caliper
+- Ethereum
+- Smart Contracts
+</code></pre></p>
+                        <ul class="list-inline item-details">
+                            
+                            <li>Date:
+                                <strong>2017-11 ~ 2019-07</strong>
+                            </li>
+                            <li>Category:
+                                <strong>Lead Blockchain Developer</strong>
+                            </li>
+                        </ul>
+                        <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i> Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="portfolio-modal modal fade" id="portfolioModal2" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-content">
+        <div class="close-modal" data-dismiss="modal">
+            <div class="lr">
+                <div class="rl">
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2">
+                    <div class="modal-body">
+                        <h2>BNK시스템</h2>
+                        <hr class="star-primary">
+                        <img src="img/portfolio/bnk.jpg" class="img-responsive img-centered" alt="">
+                        <p><pre><code>- BNK App Push System
+- BNK App Sumlife Service
+</code></pre></p>
+                        <ul class="list-inline item-details">
+                            
+                            <li>Date:
+                                <strong>2017-03 ~ 2017-11</strong>
+                            </li>
+                            <li>Category:
+                                <strong>Software Developer</strong>
+                            </li>
+                        </ul>
+                        <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i> Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="portfolio-modal modal fade" id="portfolioModal5" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-content">
+        <div class="close-modal" data-dismiss="modal">
+            <div class="lr">
+                <div class="rl">
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2">
+                    <div class="modal-body">
+                        <h2>(주)금양</h2>
+                        <hr class="star-primary">
+                        <img src="img/portfolio/kyc.jpg" class="img-responsive img-centered" alt="">
+                        <p><pre><code>- ERP
+- DevOps
+</code></pre></p>
+                        <ul class="list-inline item-details">
+                            
+                            <li>Date:
+                                <strong>2015-06 ~ 2017-03</strong>
+                            </li>
+                            <li>Category:
+                                <strong>Software Developer</strong>
+                            </li>
+                        </ul>
+                        <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i> Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="portfolio-modal modal fade" id="portfolioModal6" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-content">
+        <div class="close-modal" data-dismiss="modal">
+            <div class="lr">
+                <div class="rl">
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2">
+                    <div class="modal-body">
+                        <h2>케이엘넷</h2>
+                        <hr class="star-primary">
+                        <img src="img/portfolio/klnet.png" class="img-responsive img-centered" alt="">
+                        <p><pre><code>- Logistics Service(Web, EDI)
+- DevOps
+</code></pre></p>
+                        <ul class="list-inline item-details">
+                            
+                            <li>Date:
+                                <strong>2011-07 ~ 2015-04</strong>
+                            </li>
+                            <li>Category:
+                                <strong>Software Developer</strong>
+                            </li>
+                        </ul>
+                        <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i> Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="portfolio-modal modal fade" id="portfolioModal7" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-content">
+        <div class="close-modal" data-dismiss="modal">
+            <div class="lr">
+                <div class="rl">
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2">
+                    <div class="modal-body">
+                        <h2>아바드(주))</h2>
+                        <hr class="star-primary">
+                        <img src="img/portfolio/avad.png" class="img-responsive img-centered" alt="">
+                        <p><pre><code>- Feature phone Call, Loaming, USIM
+- Smart phone Call, Loaming, USIM
+</code></pre></p>
+                        <ul class="list-inline item-details">
+                            
+                            <li>Date:
+                                <strong>2009-10 ~ 2011-06</strong>
+                            </li>
+                            <li>Category:
+                                <strong>Embedded Developer</strong>
+                            </li>
+                        </ul>
+                        <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i> Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+        <!-- jQuery -->
+<script src="https://underbell.github.io/js/jquery-1.11.js"></script>
+<!-- Bootstrap Core JavaScript -->
+<script src="https://underbell.github.io/js/bootstrap.js"></script>
+<!-- Plugin JavaScript -->
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
+<script src="https://underbell.github.io/js/classie.js"></script>
+<script src="https://underbell.github.io/js/cbpAnimatedHeader.js"></script>
+<!-- Contact Form JavaScript -->
+<script src="https://underbell.github.io/js/jqBootstrapValidation.js"></script>
+<script src="https://underbell.github.io/js/contact_me.js"></script>
+<!-- Custom Theme JavaScript -->
+<script src="https://underbell.github.io/js/freelancer.js"></script>
+<!-- Custom JavaScript files -->
+
+
+
     </body>
 </html>
